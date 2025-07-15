@@ -10,12 +10,12 @@ const text = ref('')
   <UiContainer>
     <UiStory title="Простое использование">
       <UiFlex gap="larger" column>
-        <UiFormGroup for="password0" label="Пароль" hint="Это поле обязательно для заполнения" :invalid="!text">
+        <UiFormGroup forx="password0" label="Пароль" hint="Это поле обязательно для заполнения" :invalid="!text">
           <UiInput id="password0" v-model="text" />
         </UiFormGroup>
 
         <UiFormGroup
-          for="password1"
+          forx="password1"
           label="Повторите пароль"
           hint="Это поле обязательно для заполнения"
           :invalid="!text"
@@ -30,7 +30,7 @@ const text = ref('')
     <UiStory title="С описанием и подсказкой">
       <UiFlex gap="larger" column>
         <UiFormGroup
-          for="password2"
+          forx="password2"
           label="Пароль"
           description="Пароль важен для защиты вашего аккаунта"
           hint="По возможности используйте сгенерированный пароль"
@@ -39,7 +39,7 @@ const text = ref('')
           <UiInput id="password2" v-model="text" />
         </UiFormGroup>
         <UiFormGroup
-          for="password3"
+          forx="password3"
           label="Пароль"
           description="Пароль важен для защиты вашего аккаунта"
           hint="Требуется одна буква, цифра, иероглиф, постоянная планка"
@@ -52,7 +52,7 @@ const text = ref('')
 
     <UiStory title="Кастомный контент">
       <UiFlex gap="larger" column>
-        <UiFormGroup for="password4" show-hint invalid>
+        <UiFormGroup forx="password4" show-hint invalid>
           <template #label>
             <UiFlex gap="small">
               <UiIcon icon="key" />
